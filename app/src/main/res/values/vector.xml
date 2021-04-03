@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="mouth_name">mouth</string>
+    <string name="star_name">star</string>
+    <string name="circle_name">circle</string>
 
     <string name="mouth_zero_rate_path">M6,10 L6,7 C5,7 18,7 19,7 L19,10 C19,10 6,10 6,10</string>
     <string name="mouth_one_rate_path">M6.5,12 L2,12 C4,2 20,2 22,12 L17.5,12 C16,12 8,12 6.5,12</string>
