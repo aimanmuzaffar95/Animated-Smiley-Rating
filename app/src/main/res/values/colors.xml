@@ -12,6 +12,8 @@
     <color name="colorYellow">#EFC64A</color>
     <color name="colorAmber">#EF9C4E</color>
     <color name="colorOrange">#FB8621</color>
+    <color name="colorBackgroundYellow">#FFBF00</color>
+    <color name="colorGrey">#607D8B</color>
     <color name="colorDeepOrange">#EC5016</color>
     <color name="colorTranslucentBlack">#0A000000</color>
 </resources>

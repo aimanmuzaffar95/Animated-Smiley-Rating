@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Animated Rating</string>
+    <string name="how_was_your_food">How was your Food?</string>
+
+    <string name="text_rating_one">Extremely bad :(</string>
+    <string name="text_rating_two">Bad :(</string>
+    <string name="text_rating_three">It was just okay :/</string>
+    <string name="text_rating_four">Good ^_^</string>
+    <string name="text_rating_five">Loved it &lt;3</string>
+    <string name="submit">Submit</string>
+    <string name="thank_you_for_the_feedback">Thank you for your feedback</string>
 </resources>

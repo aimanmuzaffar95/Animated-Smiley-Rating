@@ -1,13 +1,18 @@
 package com.aiman.animatedrating.ui
 
-import android.content.Intent
+import android.animation.ObjectAnimator
 import android.graphics.drawable.AnimatedVectorDrawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import com.aiman.animatedrating.R
 import com.aiman.animatedrating.databinding.ActivityMainBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.ratingView.setRatingChangeListener { previousRating, newRating ->
             animateSmiley(previousRating, newRating)
+            showRatingText(newRating)
         }
 
     }
@@ -68,5 +74,66 @@ class MainActivity : AppCompatActivity() {
         5 == previousRating && 4 == newRating -> R.drawable.anim_five_to_four
 
         else -> null
+    }
+
+    private fun showRatingText(rating: Int) {
+
+        binding.ratingText.visibility = View.VISIBLE
+
+
+        val ratingMessage = when(rating) {
+            1 -> getString(R.string.text_rating_one)
+            2 -> getString(R.string.text_rating_two)
+            3 -> getString(R.string.text_rating_three)
+            4 -> getString(R.string.text_rating_four)
+            else -> getString(R.string.text_rating_five)
+        }
+        binding.ratingText.text = ratingMessage
+    }
+
+    private fun animateViewOffScreen() {
+        ObjectAnimator.ofFloat(binding.tvHeading, "translationY", -400f).apply {
+            duration = 400
+            start()
+        }
+
+        ObjectAnimator.ofFloat(binding.ratingText, "translationY", -1600f).apply {
+            duration = 600
+            start()
+        }
+
+        ObjectAnimator.ofFloat(binding.ratingView, "translationY", -1800f).apply {
+            duration = 600
+            start()
+        }
+
+        ObjectAnimator.ofFloat(binding.submitBtn, "translationY", 1800f).apply {
+            duration = 1000
+            start()
+        }
+
+        MainScope().launch {
+            delay(200)
+            ObjectAnimator.ofFloat(binding.include.parent, "translationY", -620f).apply {
+                duration = 800
+                start()
+            }
+
+            delay(600)
+            ObjectAnimator.ofFloat(binding.tvThanksForFeedback, "translationY", 350f).apply {
+                duration = 300
+                start()
+            }
+
+        }
+
+    }
+
+    fun onClick(view: View) {
+        when(view.id) {
+            R.id.submit_btn -> {
+                animateViewOffScreen()
+            }
+        }
     }
 }
