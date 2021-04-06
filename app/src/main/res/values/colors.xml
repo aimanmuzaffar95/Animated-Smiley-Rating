@@ -9,11 +9,13 @@
     <color name="white">#FFFFFFFF</color>
 
 
-    <color name="colorYellow">#EFC64A</color>
+    <color name="colorYellow">#F7CA4C</color>
     <color name="colorAmber">#EF9C4E</color>
     <color name="colorOrange">#FB8621</color>
+    <color name="activityBackground">#4C79F7</color>
     <color name="colorBackgroundYellow">#FFBF00</color>
     <color name="colorGrey">#607D8B</color>
     <color name="colorDeepOrange">#EC5016</color>
     <color name="colorTranslucentBlack">#0A000000</color>
+    <color name="colorButton">#052B9F</color>
 </resources>

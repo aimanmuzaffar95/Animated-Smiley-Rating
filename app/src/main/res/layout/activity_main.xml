@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:animateLayoutChanges="true"
-        android:background="#455a64"
+        android:background="@color/activityBackground"
         tools:context=".ui.MainActivity">
 
         <TextView
@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="48dp"
             android:layout_marginEnd="48dp"
-            android:backgroundTint="#263238"
+            android:backgroundTint="@color/colorOrange"
             android:onClick="onClick"
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
