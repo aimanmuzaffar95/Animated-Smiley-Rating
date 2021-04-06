@@ -1,5 +1,5 @@
 # Animated-Smiley-Rating
-This a demo application with animated SVG animation of Smiley
+Animated Customer feedback and rating UI
 
 ![Image](demo.gif)
 
